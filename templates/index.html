@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutrition Buddy</title>
+</head>
+<body>
+    <h1>AI Nutrition Buddy 🍎</h1>
+    <form method="POST">
+        <label>Enter your meals (comma separated):</label><br>
+        <input type="text" name="meals" placeholder="egg, rice, milk" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if calories %}
+        <h2>Today's Summary</h2>
+        <p><strong>Calories:</strong> {{ calories }}</p>
+        <p><strong>Protein:</strong> {{ protein }}g</p>
+        <h3>Suggestions:</h3>
+        <ul>
+            {% for suggestion in suggestions %}
+                <li>{{ suggestion }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
+
+

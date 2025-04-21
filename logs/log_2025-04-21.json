@@ -1,0 +1,12 @@
+{
+    "date": "2025-04-21",
+    "foods": [
+        {
+            "item": "",
+            "calories": 0,
+            "protein": 0
+        }
+    ],
+    "total_calories": 0,
+    "total_protein": 0
+}
