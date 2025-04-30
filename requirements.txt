@@ -1,0 +1,6 @@
+ Flask
+gunicorn
+
+git add requirements.txt
+git commit -m "Added gunicorn to requirements"
+git push origin master
