@@ -1,28 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Nutrition Buddy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Nutrition Buddy</title>
+  <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
-    <h1>AI Nutrition Buddy 🍎</h1>
-    <form method="POST">
-        <label>Enter your meals (comma separated):</label><br>
-        <input type="text" name="meals" placeholder="egg, rice, milk" required><br><br>
-        <input type="submit" value="Submit">
-    </form>
+  <header class="hero">
+    <nav class="nav-container">
+      <div class="logo">🥗 Nutrition Buddy</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#try">Try Now</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Track, Plan & Optimize Your Nutrition</h1>
+      <p>AI-powered calorie & protein tracker with personalized meal suggestions.</p>
+      <a href="#try" class="cta-button">Get Started</a>
+    </div>
+  </header>
 
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Daily Tracker</h3>
+        <p>Log your meals & see instant calorie & protein totals.</p>
+      </div>
+      <div class="card">
+        <h3>Meal Suggestions</h3>
+        <p>Get AI-powered suggestions based on your goals.</p>
+      </div>
+      <div class="card">
+        <h3>Quantity Support</h3>
+        <p>Enter exact amounts like "200ml milk" or "500g rice".</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how-it-works">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Enter your meals in the form below.</li>
+      <li>See your total calories & protein for the day.</li>
+      <li>Receive smart meal suggestions.</li>
+    </ol>
+  </section>
+
+  <section id="try" class="try">
+    <h2>Try It Now</h2>
+    <form method="POST" action="/">
+      <input type="text" name="meals" placeholder="e.g., 2 eggs, 200ml milk" required />
+      <button type="submit">Calculate</button>
+    </form>
     {% if calories %}
-        <h2>Today's Summary</h2>
-        <p><strong>Calories:</strong> {{ calories }}</p>
-        <p><strong>Protein:</strong> {{ protein }}g</p>
-        <h3>Suggestions:</h3>
-        <ul>
-            {% for suggestion in suggestions %}
-                <li>{{ suggestion }}</li>
+      <div class="result">
+        <p><strong>Total Calories:</strong> {{ calories }} kcal</p>
+        <p><strong>Total Protein:</strong> {{ protein }} g</p>
+        {% if suggestions %}
+          <h3>Suggestions</h3>
+          <ul>
+            {% for s in suggestions %}
+              <li>{{ s }}</li>
             {% endfor %}
-        </ul>
+          </ul>
+        {% endif %}
+      </div>
     {% endif %}
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nutrition Buddy. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
-
-

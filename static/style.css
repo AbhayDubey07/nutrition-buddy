@@ -1,0 +1,117 @@
+/* static/style.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .nav-container {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero-content h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+  
+  .hero-content p {
+    margin: 10px 0 20px;
+    font-size: 1.2rem;
+  }
+  
+  .cta-button {
+    background: #fff;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .features, .how-it-works, .try {
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .features .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .features .card {
+    flex: 1;
+    min-width: 200px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .how-it-works ol {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .try form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .try input {
+    padding: 10px;
+    flex: 1 1 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .try button {
+    padding: 10px 20px;
+    background: #84fab0;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .result {
+    text-align: center;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #f0f0f0;
+  }
+   
